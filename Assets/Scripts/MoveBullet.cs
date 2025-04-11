@@ -2,18 +2,45 @@ using UnityEngine;
 
 public class MoveBullet : MonoBehaviour
 {
-    public float speed = 500f; // Snelheid van de bullet  
-    private Rigidbody rb; // Referentie naar de Rigidbody  
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+    public float projectileSpeed = 20f;
+    public float fireRate = 0.5f;
+    private float nextFireTime = 0f;
+    public AnimationClip fireClip;
+    public Animator[] aniamtion;
 
-    void Start()
+
+    void Update()
     {
-        // Haal de Rigidbody component op  
-        rb = GetComponent<Rigidbody>();
+        Animator animator = GetComponent<Animator>();
+        if (gameObject.CompareTag("Player"))
+        {
+            if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
+            {
+                FireProjectile();
+                nextFireTime = Time.time + fireRate;
+            }
+        }
+        else
+        {
+            if (Time.time >= nextFireTime)
+            {
+                FireProjectile();
+                animator.SetTrigger("Gtafemboyskissing");
+                nextFireTime = Time.time + fireRate;
+            }
+        }
     }
 
-    void FixedUpdate()
+    void FireProjectile()
     {
-        // Update de snelheid van de bullet  
-        rb.velocity = rb.transform.forward * speed * Time.fixedDeltaTime;
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.AddForce(firePoint.forward * projectileSpeed, ForceMode.VelocityChange);
+        }
     }
 }

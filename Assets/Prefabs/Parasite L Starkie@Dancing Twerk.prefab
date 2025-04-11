@@ -1,5 +1,110 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2719723816531794014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3859287419991985791}
+  - component: {fileID: 6636709462939269410}
+  - component: {fileID: 4445231965553324372}
+  - component: {fileID: 3832616950476759458}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3859287419991985791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719723816531794014}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.014705077, z: -0, w: -0.99989194}
+  m_LocalPosition: {x: -0.20325318, y: 1.014, z: 1.3220001}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4864419448047450907}
+  m_LocalEulerAnglesHint: {x: 0, y: 361.685, z: 0}
+--- !u!33 &6636709462939269410
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719723816531794014}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4445231965553324372
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719723816531794014}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3832616950476759458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719723816531794014}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4903112444729351408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,16 +186,32 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fd5c28ea8a08ae64498e998761d59b5e,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Object
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: fd5c28ea8a08ae64498e998761d59b5e,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 85e80871cb7494a4c9566579f76618c9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: fd5c28ea8a08ae64498e998761d59b5e,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Shooting'\n\tFrom
+        animation clip 'Shooting'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5c28ea8a08ae64498e998761d59b5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3859287419991985791}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5c28ea8a08ae64498e998761d59b5e,
         type: 3}
@@ -107,7 +228,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5c28ea8a08ae64498e998761d59b5e,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9042158015696076319}
+      addedObject: {fileID: 7684909360250343387}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5c28ea8a08ae64498e998761d59b5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134797225715663281}
     - targetCorrespondingSourceObject: {fileID: -5958552438806032170, guid: fd5c28ea8a08ae64498e998761d59b5e,
         type: 3}
       insertIndex: -1
@@ -117,6 +242,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5449617337453478421}
   m_SourcePrefab: {fileID: 100100000, guid: fd5c28ea8a08ae64498e998761d59b5e, type: 3}
+--- !u!4 &4864419448047450907 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5c28ea8a08ae64498e998761d59b5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4903112444729351408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5245060909464740257 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5c28ea8a08ae64498e998761d59b5e,
@@ -269,7 +400,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9042158015696076319
+--- !u!114 &7684909360250343387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245060909464740257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d3f2243e4dce94784f20dbaccb88f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 3387104403309868238, guid: 79c5fd80ab715a241afb334c1ff31398,
+    type: 3}
+  firePoint: {fileID: 3859287419991985791}
+  projectileSpeed: 20
+  fireRate: 0.5
+  fireClip: {fileID: -203655887218126122, guid: 61e1cfaebc905d041bdf81c1660699c5,
+    type: 3}
+  aniamtion:
+  - {fileID: 0}
+--- !u!114 &134797225715663281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,8 +433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce040b5aadcd1ca438dff0c4abf244c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  effect: {fileID: 2130516379478724479, guid: 32d18b762f7104944bc1c9bed02173f6, type: 3}
+  particle: {fileID: 0}
+  explosion: {fileID: 0}
+  tag: 
+  player: {fileID: 0}
 --- !u!1 &7585648273357933606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5958552438806032170, guid: fd5c28ea8a08ae64498e998761d59b5e,
